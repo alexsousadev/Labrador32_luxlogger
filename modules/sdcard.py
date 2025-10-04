@@ -44,3 +44,5 @@ class SdCard:
         except Exception as e:
             print(f"ERRO: Falha ao adicionar ao arquivo: {e}")
             return False
+
+
