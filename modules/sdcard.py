@@ -13,7 +13,7 @@ class SdCard:
     def setup(self):
         try:
             os.makedirs(self.storage_path, exist_ok=True)
-            print(f"Diretório '{self.storage_path}' configurado.")
+            print(f"INFO: Diretório '{self.storage_path}' configurado com sucesso")
             return True
         except Exception as e:
             print(f"ERRO: {e}")
@@ -29,7 +29,7 @@ class SdCard:
                 f.write(str(content))
             return True
         except Exception as e:
-            print(f"ERRO ao escrever arquivo: {e}")
+            print(f"ERRO: Falha ao escrever arquivo: {e}")
             return False
     
     # Adiciona conteúdo a um arquivo
@@ -42,7 +42,5 @@ class SdCard:
                 f.write(f"{content}\n")
             return True
         except Exception as e:
-            print(f"ERRO ao adicionar ao arquivo: {e}")
+            print(f"ERRO: Falha ao adicionar ao arquivo: {e}")
             return False
-
-
